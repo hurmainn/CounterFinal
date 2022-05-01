@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     int mCounter = 0;
     Button btn;
+    Button decrementbtn;
     TextView txv;
     Button resetbtn;
 
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        decrementbtn=findViewById(R.id.bt2);
+        decrementbtn.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mCounter--;
+                txv.setText(Integer.toString(mCounter));
+            }
+        }));
         resetbtn=findViewById(R.id.resetbtn);
 
         resetbtn.setOnClickListener(new View.OnClickListener()
